@@ -1,24 +1,31 @@
 package com.example.administrator.bind;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
-import com.example.animal.Bind;
-import com.example.apilibrary.BufferViewBinder;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.textView)
+
+    @BindView(R.id.textView)
     TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BufferViewBinder.bind(this);
-
-        textView.setText("A");
-
+        ButterKnife.bind(this);
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        return super.onTouchEvent(event);
+    }
+
+
 }

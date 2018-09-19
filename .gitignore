@@ -8,3 +8,8 @@
 /build
 /captures
 .externalNativeBuild
+animal/libs/
+apilibrary/libs/
+apilibrary/src/main/res/drawable/
+app/libs/
+lib/libs/
